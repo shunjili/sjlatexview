@@ -13,7 +13,7 @@ It will appear something like this:
 
 Notice that if you use string literals directly, you will have to escape the "\" character within the literal
 ### What's behind
-It is a bit hacky, but SJLatexView is subclass of UIWebView which uses mathjax to render the math equations in javascript. 
+It is a bit hacky, SJLatexView is a subclass of UIWebView which uses mathjax to render the math equations in javascript. 
 
 ### Future works
-I will try to add in more functionality like the ability to specify font and padding etc. 
+I will try to add in more functionality like the ability to specify font and padding etc. I will also try to download the mathjax file in advance to prevent repetitive fetching. 
