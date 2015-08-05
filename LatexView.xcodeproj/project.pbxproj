@@ -41,7 +41,7 @@
 			isa = PBXGroup;
 			children = (
 				66BD6A951B71D27600B6CA84 /* SJLatexView.swift */,
-				66BD6A821B71C33E00B6CA84 /* Sample App */,
+				66BD6A821B71C33E00B6CA84 /* demo */,
 				66BD6A811B71C33E00B6CA84 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,7 +54,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		66BD6A821B71C33E00B6CA84 /* Sample App */ = {
+		66BD6A821B71C33E00B6CA84 /* demo */ = {
 			isa = PBXGroup;
 			children = (
 				66BD6A831B71C33E00B6CA84 /* AppDelegate.swift */,
@@ -64,7 +64,7 @@
 				66BD6A8C1B71C33E00B6CA84 /* LaunchScreen.storyboard */,
 				66BD6A8F1B71C33E00B6CA84 /* Info.plist */,
 			);
-			name = "Sample App";
+			name = demo;
 			path = LatexView;
 			sourceTree = "<group>";
 		};
@@ -290,6 +290,7 @@
 				66BD6A941B71C33E00B6CA84 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
