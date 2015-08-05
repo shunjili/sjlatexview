@@ -10,24 +10,27 @@ import Foundation
 import UIKit
 
 class SJLatexView: UIWebView {
-    var latexString: String! {
-        didSet {
-            if let latexString = latexString {
-                loadHTMLString(contentHtmlWithLatexString(latexString), baseURL: nil)
-            }
-        }
+
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+        self.scrollView.scrollEnabled = false
     }
     
-    func mathJaxScript() -> String {
+    func loadLatexString(latexString: String) {
+        loadHTMLString(contentHtmlWithLatexString(latexString), baseURL: nil)
+    }
+    
+    private func mathJaxScript() -> String {
         return "<script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>"
     }
     
-    func configScript() -> String {
+    private func configScript() -> String {
         return "<script type=\"text/x-mathjax-config\">"
-            + "MathJax.Hub.Config({jax: [\"input/TeX\",\"output/HTML-CSS\"], tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} , \"HTML-CSS\": {linebreaks: {automatic: true}}});</script>"
+               + "MathJax.Hub.Config({jax: [\"input/TeX\",\"output/HTML-CSS\"], tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} , \"HTML-CSS\": {linebreaks: {automatic: true}}});"
+               + "</script>"
     }
     
-    func contentHtmlWithLatexString(latexString: String) -> String {
+    private func contentHtmlWithLatexString(latexString: String) -> String {
         let header = configScript() + mathJaxScript()
         return "<html><header>\(header)</header><body>\(latexString)</body></html>"
     }

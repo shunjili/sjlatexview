@@ -17,33 +17,23 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqb-aa-MeT">
-                                <rect key="frame" x="20" y="78" width="560" height="263"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqb-aa-MeT" customClass="SJLatexView" customModule="LatexView" customModuleProvider="target">
+                                <rect key="frame" x="20" y="78" width="560" height="200"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="263" id="Chy-ah-okr"/>
+                                    <constraint firstAttribute="height" constant="200" id="Chy-ah-okr"/>
                                 </constraints>
                             </webView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CWO-2t-rN3">
-                                <rect key="frame" x="20" y="20" width="560" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eqb-aa-MeT" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="02B-9f-8XK"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="CWO-2t-rN3" secondAttribute="leading" id="30h-EW-5n6"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="CWO-2t-rN3" secondAttribute="leading" id="6p3-Vx-BMS"/>
-                            <constraint firstItem="CWO-2t-rN3" firstAttribute="trailing" secondItem="eqb-aa-MeT" secondAttribute="trailing" id="AAN-5y-go3"/>
-                            <constraint firstItem="CWO-2t-rN3" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Ap2-ca-nvy"/>
-                            <constraint firstItem="CWO-2t-rN3" firstAttribute="leading" secondItem="eqb-aa-MeT" secondAttribute="leading" id="K4y-z6-k3E"/>
-                            <constraint firstItem="eqb-aa-MeT" firstAttribute="top" secondItem="CWO-2t-rN3" secondAttribute="bottom" constant="28" id="Lkd-gG-HNA"/>
-                            <constraint firstItem="CWO-2t-rN3" firstAttribute="width" secondItem="eqb-aa-MeT" secondAttribute="width" id="mo6-ql-GJQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eqb-aa-MeT" secondAttribute="trailing" id="H6b-Nc-Jhd"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="eqb-aa-MeT" secondAttribute="leading" id="IVa-wL-mDJ"/>
+                            <constraint firstItem="eqb-aa-MeT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="58" id="rzV-sG-PBc"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="latexInputTextView" destination="CWO-2t-rN3" id="J70-rI-3K7"/>
                         <outlet property="latexWebView" destination="eqb-aa-MeT" id="UOV-N7-8er"/>
                     </connections>
                 </viewController>
