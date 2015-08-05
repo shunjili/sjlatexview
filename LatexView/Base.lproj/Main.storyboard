@@ -34,7 +34,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="latexWebView" destination="eqb-aa-MeT" id="UOV-N7-8er"/>
+                        <outlet property="latexView" destination="eqb-aa-MeT" id="HmE-HE-8vq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
